@@ -9,6 +9,7 @@ glusterfs_packages:
 glusterfs_service:
   service.running:
     - name: {{ server.service }}
+    - enable: True
     - require:
       - pkg: glusterfs_packages
 
